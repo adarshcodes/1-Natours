@@ -84,8 +84,8 @@ body {
   background-image: linear-gradient(to right, #55c57a, #28b485);
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: .2rem;
-  transition: all .2s; }
+  letter-spacing: 0.2rem;
+  transition: all 0.2s; }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -160,7 +160,18 @@ body {
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px solid #7ed56f;
-  padding: 3px; }
+  padding: 3px;
+  transition: all 0.2s; }
+
+.btn-text:hover {
+  background-color: #7ed56f;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }
 
 .header {
   height: 95vh;
@@ -201,7 +212,7 @@ body {
   .row .col-1-of-3 {
     width: calc((100% - 2 * 3rem)/3); }
   .row .col-2-of-3 {
-    width: calc(2* ((100% - 2 * 3rem)/3)  + 3rem); }
+    width: calc(2* ((100% - 2 * 3rem)/3) + 3rem); }
   .row .col-1-of-4 {
     width: calc((100% - 3 * 3rem)/4); }
   .row .col-2-of-4 {
