@@ -239,13 +239,13 @@ body {
     .card_side-front {
       background-color: #fff; }
     .card_side-back {
-      transform: rotateY(180deg); }
+      transform: rotateX(-180deg); }
       .card_side-back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
   .card:hover .card_side-front {
-    transform: rotateY(180deg); }
+    transform: rotateX(180deg); }
   .card:hover .card_side-back {
-    transform: rotateY(0); }
+    transform: rotateX(0); }
 
 .header {
   height: 95vh;
