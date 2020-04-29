@@ -49,7 +49,7 @@
 
   &:hover &_caption {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    @include absCenter;
   }
 
   &:hover &_img {

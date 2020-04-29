@@ -368,6 +368,9 @@ body {
     backface-visibility: hidden; }
   .story:hover .story_caption {
     opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%); }
   .story:hover .story_img {
     transform: translateX(-3.2rem) scale(1);
@@ -462,6 +465,44 @@ body {
 
 .form_radio-input:checked ~ .form_radio-label .form_radio-button::after {
   opacity: 1; }
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 160; }
+  .popup_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border: 3px;
+    display: table;
+    overflow: hidden; }
+  .popup_left {
+    width: 33.3333333333333%;
+    display: table-cell; }
+  .popup_right {
+    width: 66.666666666666667;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+    backface-visibility: hidden; }
+  .popup_img {
+    display: block;
+    width: 100%; }
+  .popup_text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #eee; }
 
 .header {
   height: 95vh;
@@ -628,20 +669,20 @@ body {
 .navigation_icon {
   position: relative;
   margin-top: 3.5rem; }
-  .navigation_icon, .navigation_icon::before, .navigation_icon::after {
+  .navigation_icon, .navigation_icon::after, .navigation_icon::before {
     width: 3rem;
     height: 2px;
     background-color: #333;
     display: inline-block; }
-  .navigation_icon::before, .navigation_icon::after {
+  .navigation_icon::after, .navigation_icon::before {
     content: '';
     position: absolute;
     left: 0;
-    transition: all .2s; }
+    transition: all 0.2s; }
   .navigation_icon::before {
     top: -.8rem; }
   .navigation_icon::after {
-    top: .8rem; }
+    top: 0.8rem; }
 
 .navigation_button:hover .navigation_icon::before {
   top: -1rem; }
