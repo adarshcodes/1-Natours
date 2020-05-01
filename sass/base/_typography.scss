@@ -12,12 +12,19 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
 
+
   &-main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation: toLeft 1s ease-out;
+
+    @include respond(phone){
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+
   }
 
   &-sub {
@@ -26,6 +33,10 @@ body {
     font-weight: 700;
     letter-spacing: 1.74rem;
     animation: toRight 1s ease-out;
+
+    @include respond(phone){
+      letter-spacing: .5rem;
+     }
   }
 }
 
@@ -39,6 +50,16 @@ body {
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
+
+  @include respond(tab-port){
+    font-size: 3rem;
+  }
+
+  @include respond(tab-port){
+    font-size: 2.5rem; 
+  }
+
+
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
