@@ -4,10 +4,16 @@
   box-shadow: 0 3rem 6rem rgba($color-black, .1);
   background-color: rgba($color-white, .6);
   border-radius: $cards-radius;
-  padding: 6rem;
-  padding-left: 9rem;
+  padding: 6rem 6rem 6rem 9rem;
   font-size: $default-font-size;
   transform: skewX(-12deg);
+  @include respond(tab-port) {
+    width: 90%;
+    padding: 4rem 4rem 4rem 7rem;
+  }
+  @include respond(phone) {
+    transform: skewX(0);
+  }
 
   &_shape {
     width: 13.3rem;
@@ -16,20 +22,26 @@
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path:circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
     transform: translate(-3rem) skewX(12deg);
     position: relative;
     overflow: hidden;
+    @include respond(phone) {
+      transform: translate(-3rem) skewX(0);
+    }
   }
 
   &_img {
     height: 100%;
     transform: translateX(-3.2rem) scale(1.4);
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   &_text {
     transform: skewX(12deg);
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &_caption {
@@ -43,7 +55,7 @@
     font-weight: 400;
     text-align: center;
     opacity: 0;
-    transition: all .5s;
+    transition: all 0.5s;
     backface-visibility: hidden;
   }
 
@@ -56,5 +68,4 @@
     transform: translateX(-3.2rem) scale(1);
     filter: blur(2.5px);
   }
-
 }

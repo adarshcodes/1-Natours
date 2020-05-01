@@ -377,7 +377,11 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 52rem; }
+  height: 52rem;
+  /*600px*/
+  /*900px*/
+  /*1200px*/
+  /*1800px*/ }
   .card_side {
     height: 52rem;
     transition: all 0.8s ease;
@@ -456,6 +460,7 @@ body {
     width: 90%;
     text-align: center; }
   .card_price-box {
+    text-align: center;
     color: #fff;
     margin-bottom: 8rem; }
   .card_price-only {
@@ -464,6 +469,34 @@ body {
   .card_price-value {
     font-size: 6rem;
     font-weight: 100; }
+  @media screen and (max-width: 56.25em) {
+    .card {
+      height: auto;
+      border: 3px;
+      background-color: #fff;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      .card_side {
+        height: auto;
+        position: relative;
+        box-shadow: none; }
+        .card_side-back {
+          transform: rotateX(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+      .card:hover .card_side-front {
+        transform: rotateX(0); }
+      .card_details {
+        padding: 3rem; }
+      .card_cta {
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        padding: 7rem 4rem 4rem 4rem; }
+      .card_price-box {
+        margin-bottom: 3rem; }
+      .card_price-value {
+        font-size: 4rem; } }
 
 .story {
   width: 75%;
@@ -471,10 +504,24 @@ body {
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
-  padding: 6rem;
-  padding-left: 9rem;
+  padding: 6rem 6rem 6rem 9rem;
   font-size: 1.6rem;
-  transform: skewX(-12deg); }
+  transform: skewX(-12deg);
+  /*600px*/
+  /*900px*/
+  /*1200px*/
+  /*1800px*/
+  /*600px*/
+  /*900px*/
+  /*1200px*/
+  /*1800px*/ }
+  @media screen and (max-width: 56.25em) {
+    .story {
+      width: 90%;
+      padding: 4rem 4rem 4rem 7rem; } }
+  @media screen and (max-width: 37.5em) {
+    .story {
+      transform: skewX(0); } }
   .story_shape {
     width: 13.3rem;
     height: 13.3rem;
@@ -485,13 +532,27 @@ body {
     clip-path: circle(50% at 50% 50%);
     transform: translate(-3rem) skewX(12deg);
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    /*600px*/
+    /*900px*/
+    /*1200px*/
+    /*1800px*/ }
+    @media screen and (max-width: 37.5em) {
+      .story_shape {
+        transform: translate(-3rem) skewX(0); } }
   .story_img {
     height: 100%;
     transform: translateX(-3.2rem) scale(1.4);
-    transition: all .5s; }
+    transition: all 0.5s; }
   .story_text {
-    transform: skewX(12deg); }
+    transform: skewX(12deg);
+    /*600px*/
+    /*900px*/
+    /*1200px*/
+    /*1800px*/ }
+    @media screen and (max-width: 37.5em) {
+      .story_text {
+        transform: skewX(0); } }
   .story_caption {
     position: absolute;
     top: 50%;
@@ -503,7 +564,7 @@ body {
     font-weight: 400;
     text-align: center;
     opacity: 0;
-    transition: all .5s;
+    transition: all 0.5s;
     backface-visibility: hidden; }
   .story:hover .story_caption {
     opacity: 1;
@@ -543,7 +604,14 @@ body {
   border-bottom: 3px solid transparent;
   width: 90%;
   display: block;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  /*600px*/
+  /*900px*/
+  /*1200px*/
+  /*1800px*/ }
+  @media screen and (max-width: 56.25em) {
+    .form_input {
+      width: 100%; } }
   .form_input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -568,7 +636,15 @@ body {
 
 .form_radio-group {
   width: 45%;
-  display: inline-block; }
+  display: inline-block;
+  /*600px*/
+  /*900px*/
+  /*1200px*/
+  /*1800px*/ }
+  @media screen and (max-width: 56.25em) {
+    .form_radio-group {
+      width: 100%;
+      margin-bottom: 2.5rem; } }
 
 .form_radio-input {
   display: none; }
@@ -1031,7 +1107,34 @@ body {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg");
   background-size: cover;
   border-radius: 3px;
-  height: 50rem; }
+  /*600px*/
+  /*900px*/
+  /*1200px*/
+  /*1800px*/
+  /*600px*/
+  /*900px*/
+  /*1200px*/
+  /*1800px*/ }
+  @media screen and (max-width: 75em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url("../img/nat-10.jpg"); } }
+  @media screen and (max-width: 56.25em) {
+    .book {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url("../img/nat-10.jpg"); } }
   .book_form {
     width: 50%;
-    padding: 6rem; }
+    padding: 6rem;
+    /*600px*/
+    /*900px*/
+    /*1200px*/
+    /*1800px*/
+    /*600px*/
+    /*900px*/
+    /*1200px*/
+    /*1800px*/ }
+    @media screen and (max-width: 75em) {
+      .book_form {
+        width: 65%; } }
+    @media screen and (max-width: 56.25em) {
+      .book_form {
+        width: 100%; } }
