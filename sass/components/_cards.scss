@@ -138,8 +138,9 @@
     font-size: 6rem;
     font-weight: 100;
   }
-
-  @include respond(tab-port) {
+  // @include respond(tab-port) {
+  @media only screen and (max-width: 56.25em),
+  only screen and (hover: none) {
     height: auto;
     border: $cards-radius;
     background-color: $color-white;
@@ -170,7 +171,7 @@
       top: 0;
       left: 0;
       transform: translate(0);
-      padding: 7rem 4rem 4rem 4rem;
+      padding: 7rem 4rem 4rem;
     }
 
     &_price-box {
